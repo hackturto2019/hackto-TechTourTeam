@@ -1,0 +1,10 @@
+<h1 style="padding-left: 10px"> {{titulo}}</h1>
+
+<agm-map [latitude]="lat2" [zoom]="zoom" [longitude]="lng2">
+  <agm-marker  [latitude]="lat1" [longitude]="lng1"></agm-marker>
+  <agm-marker  [latitude]="lat2" [longitude]="lng2"></agm-marker>
+  <agm-marker  [latitude]="lat3" [longitude]="lng3"></agm-marker>
+</agm-map>
+<div style=" margin-top: 20px; text-align: right; margin-right: 10px;">
+  <a href="https://www.google.com/maps/dir/?api=1&origin=CEULP&destination=Capim+Dourado" style="padding: 5px 15px; background-color: #3e8f3e; color: #fff; text-decoration: none;">Primeira parada</a>
+</div>

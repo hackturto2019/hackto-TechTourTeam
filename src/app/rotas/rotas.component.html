@@ -1,15 +1,18 @@
-<div ngFor="let rota of rotas">
+<div *ngFor="let rota of rotas">
     <mat-card>
-        <mat-card-header>
-            <mat-card-title>{{rota.titulo}}</mat-card-title>
-        </mat-card-header>
-        <img mat-card-image src="{{rota.imagem-destaque}}" alt="Cachoeira do romcador">
+      <mat-card-header>
+        <mat-card-title>{{rota.titulo}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="../../assets/img/cachoeira.jpg" alt="Cachoeira do romcador">
+      <mat-card-content>
         <mat-card-content>
-            <mat-card-content>
-                <p>
-                    Conheça as melhores cachoeiras da região.
-                </p>
-            </mat-card-content>
+          <div style="text-align: right">
+            <i class="fas fa-heart" style="margin-right: 10px; color:red"></i> <i class="fas fa-star" style="color: darkgoldenrod"></i>
+          </div>
+          <p>
+            {{rota.texto}}
+          </p>
         </mat-card-content>
+      </mat-card-content>
     </mat-card>
 </div>

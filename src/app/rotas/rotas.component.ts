@@ -7,18 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RotasComponent implements OnInit {
 
-  @input()
   rotas = Array(
-      {'titulo':'Nova Rota 1',
-        'texto':'Conheça os restaurantes vegetarianos',
+      {'titulo': 'Rota das Cachoeiras',
+        'texto':'Conheça as cachoeiras e vistas da região',
         'imagem-destaque':'../../assets/img/cachoeira.jpg'},
-      {'titulo':'Nova Rota 2',
-        'texto':'Conheça os restaurantes vegetarianos', 'imagem-destaque':'../../assets/img/cachoeira.jpg'},
-      {'titulo':'Nova Rota 3',
-        'texto':'Conheça os restaurantes vegetarianos',
-        'imagem-destaque':'../../assets/img/cachoeira.jpg'}
+      {'titulo':'Restaurantes Vegetariano/Vegano',
+        'texto':'Os melhores restaurantes com opções vegetarianas', 'imagem-destaque':'../../assets/img/cachoeira.jpg'},
+      {'titulo':'Praias e Natureza',
+        'texto':'Lazer e descanço',
+        'imagem-destaque': '../../assets/img/cachoeira.jpg'}
       );
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
   }

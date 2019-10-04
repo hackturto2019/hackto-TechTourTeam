@@ -13,13 +13,22 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { RotasComponent } from './rotas/rotas.component';
 import {MatCardModule} from '@angular/material/card';
+import { RotaComponent } from './rota/rota.component';
+import { RouterModule, Routes } from '@angular/router';
+import { AgmCoreModule } from '@agm/core';
+
+const appRoutes: Routes = [
+  { path: 'rotas', component: RotasComponent},
+  { path: 'detinos', component: RotaComponent}
+];
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    RotasComponent
+    RotasComponent,
+    RotaComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +40,11 @@ import {MatCardModule} from '@angular/material/card';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    RouterModule.forRoot(appRoutes),
+    AgmCoreModule.forRoot({
+      apiKey: 'MINHA-API-AQUI'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
