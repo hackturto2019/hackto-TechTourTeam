@@ -17,6 +17,7 @@ import { RotaComponent } from './rota/rota.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AgmCoreModule } from '@agm/core';
 import { DestinoComponent } from './destino/destino.component';
+import { MinhasRotasComponent } from './minhas-rotas/minhas-rotas.component';
 
 const appRoutes: Routes = [
   { path: 'rotas', component: RotasComponent},
@@ -31,7 +32,8 @@ const appRoutes: Routes = [
     HomeComponent,
     RotasComponent,
     RotaComponent,
-    DestinoComponent
+    DestinoComponent,
+    MinhasRotasComponent
   ],
   imports: [
     BrowserModule,
