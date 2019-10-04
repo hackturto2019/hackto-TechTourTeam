@@ -1,6 +1,11 @@
+<form class="form-inline md-form form-sm active-purple active-purple-2 mt-2 mb-4">
+    <i class="fas fa-search ml-4" aria-hidden="true"></i>
+    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Buscar experiências"
+           aria-label="Search">
+</form>
 <div *ngFor="let rota of rotas">
     <mat-card>
-      <img style="max-height: 150px" mat-card-image src="../../assets/img/cachoeira.jpg" alt="Cachoeira do romcador">
+      <img style="max-height: 150px" mat-card-image src="{{rota.imagem}}" alt="Cachoeira do romcador">
       <div style="font-size: 12px; position: absolute; margin-top: -160px; text-align: right; margin-left: 75%; padding: 5px; background-color: #000000; color: #ffffff;;">
         {{rota.pontos}} Pontos
       </div>

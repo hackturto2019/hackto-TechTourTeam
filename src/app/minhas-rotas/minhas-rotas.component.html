@@ -1,11 +1,11 @@
 <div *ngFor="let rota of rotas">
     <mat-card>
-        <img style="max-height: 150px" mat-card-image src="../../assets/img/cachoeira.jpg" alt="Cachoeira do romcador">
+        <img style="max-height: 150px" mat-card-image src="{{rota.imagem}}" alt="Cachoeira do romcador">
         <div style="font-size: 12px; position: absolute; margin-top: -160px; text-align: right; margin-left: 75%; padding: 5px; background-color: #000000; color: #ffffff;;">
             50 Pontos
         </div>
         <div style="font-size: 12px; position: absolute; margin-top: -50px; text-align: right; margin-left: 80%; padding: 5px; background-color: #5cb85c; color: #ffffff;;">
-            35%
+            {{rota.percentual}}%
         </div>
         <div>
             <div class="container">

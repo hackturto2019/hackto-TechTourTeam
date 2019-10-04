@@ -13,20 +13,24 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar class="sidenav-color">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <div class="row">
-        <div class="col"><span>Jataí Rotas</span></div>
-        <div class="col-4"><img src="../../assets/img/logo.png" style="max-height: 30px; margin-left: 100%"></div>
+      <div class="row" style="width: 100vw">
+        <div class="col-6">
+          <button
+                  type="button"
+                  aria-label="Toggle sidenav"
+                  mat-icon-button
+                  (click)="drawer.toggle()"
+                  *ngIf="isHandset$ | async">
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+          <span style="font-family: 'Lobster', cursive;">Jataí Rotas</span>
+        </div>
+        <div class="col-6">
+          <div class="col-4 float-right mr-4"><img src="../../assets/img/logo.png" style="max-height: 30px; margin-left: 100%"></div>
+
+        </div>
       </div>
-      <div class="d-flex justify-content-end">
-      </div>
+
     </mat-toolbar>
     <!-- Add Content Here -->
     <div>
