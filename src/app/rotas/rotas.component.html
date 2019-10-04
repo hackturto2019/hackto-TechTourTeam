@@ -1,26 +1,39 @@
 <div *ngFor="let rota of rotas">
     <mat-card>
-      <img mat-card-image src="../../assets/img/cachoeira.jpg" alt="Cachoeira do romcador">
-      <mat-card-header class="align-items-top">
+      <img style="max-height: 150px" mat-card-image src="../../assets/img/cachoeira.jpg" alt="Cachoeira do romcador">
+      <div style="font-size: 12px; position: absolute; margin-top: -160px; text-align: right; margin-left: 75%; padding: 5px; background-color: #000000; color: #ffffff;;">
+        50 Pontos
+      </div>
+      <div>
         <div class="container">
           <div class="row">
-            <div class="col">
-              <mat-card-title style="font-weight: bold">{{rota.titulo}}</mat-card-title>
+            <div class="col-5 p-0 mr-2">
+                <h3 style="font-weight: bold; margin:0 !important; font-size: 15px;">{{rota.titulo}}</h3>
+              <span style="font-size: 6px; padding: 2px; background-color: #dfdfdf;">Restaurantes Típicos</span><span style="margin-left: 3px; font-size:6px; padding: 2px; background-color: #dfdfdf;">Cachoeira</span>
+                <p style="font-style: italic; font-size: 12px;">
+                  {{rota.texto}}
+                </p>
             </div>
-            <div>
-              <div style="padding:3px; border-radius: 30%; margin-right: 5px; background-color: #CC3434; color: #ffffff"><i class="fas fa-stopwatch"></i><span>3d</span></div>
-                <div style="padding:3px; border-radius: 30%; margin-right: 5px; background-color: #447e9b; color: #ffffff"><i class="fas fa-road"></i><span>22km</span></div>
-              <div style="padding:10px; border-radius: 100%; margin-right: 5px; background-color: #f5dd5d; color: #ffffff"><i class="fas fa-hand-holding-usd"></i><span>R$120</span></div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-4">
-              <i style="margin-top: 5px; color: #f5dd5d;" class="fas fa-star"></i>
-              <i style="margin-top: 5px; color: #f5dd5d;" class="fas fa-star"></i>
-              <i style="margin-top: 5px; color: #f5dd5d;" class="fas fa-star-half-alt"></i>
+            <div class="col p-0">
+                <div style="display: inline-block;">
+                  <i style="padding:3px; border-radius: 100%; border:solid 1px #cc3300; margin-right: 5px; background-color: #ffffff; color: #000000" class="fas fa-stopwatch"></i>
+                  <span style="font-weight: bold; font-size: 10px; margin-right:5px;">3d</span>
+                </div>
+                <div style="display: inline-block;">
+                  <i style="padding:3px; border-radius: 100%; border:solid 1px #447e9b; margin-right: 5px; background-color: #ffffff; color: #000000" class="fas fa-road"></i><span style="font-weight: bold; font-size: 10px; margin-right:5px;">22km</span>
+                </div>
+                <div style="display: inline-block;">
+                  <i style="padding:3px; border-radius: 100%; border:solid 1px #f5dd5d; margin-right: 5px; background-color: #ffffff; color: #000000" class="fas fa-hand-holding-usd"></i><span style="font-weight: bold; font-size: 10px; ">R$120</span>
+                </div>
+              <div>
+                <i style="font-size: 13px; color: #f5dd5d;" class="fas fa-star"></i>
+                <i style="font-size: 13px; color: #f5dd5d;" class="fas fa-star"></i>
+                <i style="font-size: 13px; color: #f5dd5d;" class="fas fa-star"></i>
+                <i style="font-size: 13px; color: #f5dd5d;" class="fas fa-star-half-alt"></i>
+              </div>
             </div>
           </div>
         </div>
-      </mat-card-header>
+      </div>
     </mat-card>
 </div>
