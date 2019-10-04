@@ -1,8 +1,3 @@
 agm-map {
-  height: 300px;
-}
-
-.imagem-destino {
-  background-image: url('../../assets/img/cachoeira.jpg');
-  background-size: cover;
+  height: 200px;
 }
