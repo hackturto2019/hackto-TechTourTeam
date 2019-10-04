@@ -18,11 +18,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { AgmCoreModule } from '@agm/core';
 import { DestinoComponent } from './destino/destino.component';
 import { MinhasRotasComponent } from './minhas-rotas/minhas-rotas.component';
+import { DestinosComponent } from './destinos/destinos.component';
 
 const appRoutes: Routes = [
   { path: 'rotas', component: RotasComponent},
-  { path: 'detinos', component: RotaComponent},
-  { path: 'destino', component: DestinoComponent}
+  { path: 'rota', component: RotaComponent},
+  { path: 'destino', component: DestinoComponent},
+  { path: 'minhas-rotas', component: MinhasRotasComponent},
+  { path: 'destinos', component: DestinosComponent}
 ];
 
 
@@ -33,7 +36,8 @@ const appRoutes: Routes = [
     RotasComponent,
     RotaComponent,
     DestinoComponent,
-    MinhasRotasComponent
+    MinhasRotasComponent,
+    DestinosComponent
   ],
   imports: [
     BrowserModule,

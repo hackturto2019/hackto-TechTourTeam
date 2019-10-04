@@ -1,0 +1,42 @@
+#topo img{
+    width: 100vw;
+}
+
+#topo h4{
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    padding: 5px 10px;
+}
+
+#topo .info {
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+#topo .info i{
+    border: 2px solid;
+    border-radius: 2rem;
+    padding: 3px;
+}
+
+#resumo {
+    text-align: justify;
+    padding: 5px 10px;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+}
+
+#dicas {
+    text-align: left;
+    padding: 5px 10px;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+}
+
+#dicas span {
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.fas {
+    font-size: 13px;
+    margin-left: 5px;
+    margin-right: 2px;
+}

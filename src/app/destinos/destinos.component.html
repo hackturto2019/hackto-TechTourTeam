@@ -1,0 +1,36 @@
+<div *ngFor="let destino of destinos">
+    <mat-card>
+        <img style="max-height: 150px" mat-card-image src="../../assets/img/cachoeira.jpg" alt="Cachoeira do romcador">
+        <div style="font-size: 12px; position: absolute; margin-top: -160px; text-align: right; margin-left: 75%; padding: 5px; background-color: #000000; color: #ffffff;;">
+            50 Pontos
+        </div>
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-5 p-0 mr-2">
+                        <a routerLink="/rota"><h3 style="font-weight: bold; margin:0 !important; font-size: 15px;">{{destino.titulo}}</h3></a>
+                        <p style="font-style: italic; font-size: 12px;">
+                            {{destino.texto}}
+                        </p>
+                    </div>
+                    <div class="col p-0">
+                        <div class="info">
+                            <i class="fas fa-wheelchair" style="color: #20639b;"></i>
+                            <a>2</a>
+                            <i class="fas fa-concierge-bell" style="color: #ed553b;"></i>
+                            <a>4</a>
+                            <i class="fas fa-hand-holding-usd" style="color: #f6d55c;"></i>
+                            <a>5</a>
+                            <i class="fas fa-recycle" style="color: #3caea3;"></i>
+                            <a>2</a>
+                        </div>
+                        <div>
+                            <span style="margin-left: 20px; font-size: 10px;">Seg a Sex 09:00h as 14:00h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div>
+
