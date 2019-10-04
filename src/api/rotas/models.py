@@ -100,12 +100,12 @@ class DestinoDeRota(models.Model):
 
 
 class Rota(models.Model):
-  proprietario = models.ForeignKey(User, verbose_name='Usuário', on_delete=models.SET_NULL, null=True)
+  proprietario = models.ForeignKey(User, verbose_name='Usuário', on_delete=models.SET_NULL, null=True, related_name='user')
   titulo = models.CharField(verbose_name='Titulo', max_length=250)
   descricao = models.TextField()
   imagens_rota = models.FileField(verbose_name='Imagem de Destaque da Rota', max_length=500,
                                   upload_to=diretorio_imagens_rota)
-  destinos = models.ManyToManyField('Destino', verbose_name='',  through='DestinoDeRota')
+  destinos = models.ManyToManyField('Destino', verbose_name='',  through='DestinoDeRota', related_name='destinos')
 
   def __str__(self):
     return self.titulo
