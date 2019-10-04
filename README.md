@@ -1,1 +1,3 @@
-# hackto-TechTourTeam
+# Tech Tour Team
+
+Projeto Hackatur
