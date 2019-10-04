@@ -1,10 +1,25 @@
-<h1 style="padding-left: 10px"> {{titulo}}</h1>
+<h1 class="mat-h1" style="padding-left: 10px; padding-top: 10px;"> {{titulo}}</h1>
 
 <agm-map [latitude]="lat2" [zoom]="zoom" [longitude]="lng2">
   <agm-marker  [latitude]="lat1" [longitude]="lng1"></agm-marker>
   <agm-marker  [latitude]="lat2" [longitude]="lng2"></agm-marker>
   <agm-marker  [latitude]="lat3" [longitude]="lng3"></agm-marker>
 </agm-map>
+<div style="padding-top: 10px;">
+
+</div>
 <div style=" margin-top: 20px; text-align: right; margin-right: 10px;">
-  <a href="https://www.google.com/maps/dir/?api=1&origin=CEULP&destination=Capim+Dourado" style="padding: 5px 15px; background-color: #3e8f3e; color: #fff; text-decoration: none;">Primeira parada</a>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="imagem-destino" style="padding: 20px;"></div>
+      <a routerLink="/destino" style="text-decoration: none;">
+        <mat-card-title>Praia da Graciosa</mat-card-title>
+        <mat-card-subtitle>Venha pra melhor praia da região Norte de Palmas</mat-card-subtitle>
+      </a>
+    </mat-card-header>
+    <mat-card-content>
+      <a href="https://www.google.com/maps/dir/?api=1&origin=CEULP&destination=Capim+Dourado" style="padding: 10px; background-color: #cc3300; color: #fff; text-decoration: none; border-radius: 100%; font-size: 15px;"><i class="fas fa-route"></i></a>
+      <a href="#" style="padding: 10px; background-color: #6DDCBD; color: #fff; text-decoration: none; border-radius: 100%; font-size: 15px; margin-left: 5px"><i class="fas fa-check"></i></a>
+    </mat-card-content>
+  </mat-card>
 </div>

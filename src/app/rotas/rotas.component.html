@@ -1,18 +1,26 @@
 <div *ngFor="let rota of rotas">
     <mat-card>
-      <mat-card-header>
-        <mat-card-title>{{rota.titulo}}</mat-card-title>
-      </mat-card-header>
       <img mat-card-image src="../../assets/img/cachoeira.jpg" alt="Cachoeira do romcador">
-      <mat-card-content>
-        <mat-card-content>
-          <div style="text-align: right">
-            <i class="fas fa-heart" style="margin-right: 10px; color:red"></i> <i class="fas fa-star" style="color: darkgoldenrod"></i>
+      <mat-card-header class="align-items-top">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <mat-card-title style="font-weight: bold">{{rota.titulo}}</mat-card-title>
+            </div>
+            <div>
+              <div style="padding:3px; border-radius: 30%; margin-right: 5px; background-color: #CC3434; color: #ffffff"><i class="fas fa-stopwatch"></i><span>3d</span></div>
+                <div style="padding:3px; border-radius: 30%; margin-right: 5px; background-color: #447e9b; color: #ffffff"><i class="fas fa-road"></i><span>22km</span></div>
+              <div style="padding:10px; border-radius: 100%; margin-right: 5px; background-color: #f5dd5d; color: #ffffff"><i class="fas fa-hand-holding-usd"></i><span>R$120</span></div>
+            </div>
           </div>
-          <p>
-            {{rota.texto}}
-          </p>
-        </mat-card-content>
-      </mat-card-content>
+          <div class="row">
+            <div class="col-4">
+              <i style="margin-top: 5px; color: #f5dd5d;" class="fas fa-star"></i>
+              <i style="margin-top: 5px; color: #f5dd5d;" class="fas fa-star"></i>
+              <i style="margin-top: 5px; color: #f5dd5d;" class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </mat-card-header>
     </mat-card>
 </div>

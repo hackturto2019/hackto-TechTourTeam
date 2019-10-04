@@ -16,10 +16,12 @@ import {MatCardModule} from '@angular/material/card';
 import { RotaComponent } from './rota/rota.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AgmCoreModule } from '@agm/core';
+import { DestinoComponent } from './destino/destino.component';
 
 const appRoutes: Routes = [
   { path: 'rotas', component: RotasComponent},
-  { path: 'detinos', component: RotaComponent}
+  { path: 'detinos', component: RotaComponent},
+  { path: 'destino', component: DestinoComponent}
 ];
 
 
@@ -28,7 +30,8 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     RotasComponent,
-    RotaComponent
+    RotaComponent,
+    DestinoComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,7 @@ const appRoutes: Routes = [
     MatCardModule,
     RouterModule.forRoot(appRoutes),
     AgmCoreModule.forRoot({
-      apiKey: 'MINHA-API-AQUI'
+      apiKey: 'AIzaSyDT-sjxpLE7JUhX8k0kPCS6CzinIiGBE88'
     })
   ],
   providers: [],
