@@ -61,7 +61,7 @@ const appRoutes: Routes = [
     GoogleChartsModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     AgmCoreModule.forRoot({
-      apiKey: 'API-GOOGLE-AQUI'
+      apiKey: 'AIzaSyDT-sjxpLE7JUhX8k0kPCS6CzinIiGBE88'
     }),
     MatGridListModule,
     MatMenuModule,
