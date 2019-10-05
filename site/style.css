@@ -1,0 +1,148 @@
+.navbar {
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    background-color: #efd14f;
+    z-index:99999;
+}
+
+nav .row{
+    width: 100vw;
+}
+
+nav a {
+    color: #201c0b !important;
+    font-family: 'Lobster', cursive;
+    font-size: xx-large;
+}
+
+.navbar i {
+    color: #201c0b;
+    font-size: 25px;
+    padding: 20px 5px;
+    float: right;
+}
+
+.navbar .card-img-top {
+    width: 70px;
+}
+
+@media only screen and (max-width: 400px) {
+    .navbar img {
+        width: 55px;
+    }
+    .navbar a {
+        font-size: initial;
+    }
+
+    .navbar .card-img-top {
+        width: 55px;
+    }
+
+    .navbar i {
+        font-size: 20px;
+    }
+}
+
+
+section {
+    padding: 90px 0;
+}
+
+section:nth-child(even) {
+    background-color: rgb(245, 245, 245);
+}
+
+.container {
+    max-width: 1080px;
+}
+
+.jumbotron_principal {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+.jumbotron_principal {
+    height: 100vh;
+    margin-bottom: 0px;
+    background: no-repeat fixed center;
+}
+
+.card, .shadow-af {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    border: 0;
+}
+
+.card:hover, .shadow-af:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, .1), 0 10px 10px -5px rgba(0, 0, 0, .04);
+}
+
+.title{
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+
+.subtitle{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    width: 50vw;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 400px) {
+    .subtitle {
+        width: 100%;
+    }
+}
+
+.text{
+    text-align: justify; 
+    font-family: 'Poppins', sans-serif;
+    padding: 0px 170px 20px;
+}
+
+@media only screen and (max-width: 400px) {
+    .text {
+        padding: 0px 10px 20px;
+    }
+}
+
+#locais, #apresentacao {
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+#locais .card-group .card {
+    margin: 15px;
+    width: 200px;
+}
+
+#locais .card-group img {
+    height: 180px;
+    width: auto
+}
+
+@media only screen and (max-width: 400px) {
+    #locais .card-group .card {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+}
+
+#disponivel img {
+    width: 250px;
+    margin:auto;
+}
+
+#rodape {
+    background-color: rgb(141, 141, 141);
+    padding: 10px 5px;
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;;
+}
+
