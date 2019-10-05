@@ -40,3 +40,9 @@
     margin-left: 5px;
     margin-right: 2px;
 }
+
+
+.imagem-pessoa {
+  background-image: url('../../assets/img/pessoa.jpg');
+  background-size: cover;
+}

@@ -22,17 +22,21 @@ export class GestaoComponent {
   options = {
   };
   width = 250;
-  height = 200;
+  height = 250;
 
-  cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
-    map(({ matches }) => {
-        return [
-          { title: 'Perfil Visitantes', cols: 2, rows: 1 },
-          { title: 'Atributos Avaliados', cols: 2, rows: 1 },
-          { title: 'Quantidade', cols: 2, rows: 1 },
-        ];
-    })
-  );
+  title2 = 'Faixa Etária';
+  type2 = 'BarChart';
+  data2 = [
+    ['18-25', 32.5],
+    ['26-40', 35.0],
+    ['41-50', 24.0],
+    ['> 50', 8.5],
+  ];
+  options2 = {
+    colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
+  };
+  width2 = 290;
+  height2 = 250;
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
