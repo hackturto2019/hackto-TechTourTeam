@@ -5,22 +5,41 @@
   <agm-marker  [latitude]="lat2" [longitude]="lng2"></agm-marker>
   <agm-marker  [latitude]="lat3" [longitude]="lng3"></agm-marker>
 </agm-map>
-<div style="padding-top: 10px; margin-left: 30px;">
-  <a href="#" class="btn btn-outline-primary" style="border:solid #000 2px; color: #000;">Quero essa experiência</a>
+<div *ngIf="!rota" style="padding-top: 10px; margin-left: 30px;">
+  <button (click)="minhaRota()" class="btn btn-outline-primary" style="border:solid #000 2px; color: #000;">Quero essa experiência</button>
 </div>
 <div style="margin-top: 20px; text-align: right; margin-right: 10px;">
   <mat-card style="width: 100vw;">
     <mat-card-header>
-      <div mat-card-avatar style="padding: 50px;background-image: url('../../assets/img/cachoeira.jpg'); background-size: cover;"></div>
+      <div mat-card-avatar style="padding: 50px; background-image: url('../../assets/img/cachoeira.jpg'); background-size: cover;"></div>
       <a routerLink="/destino" style="text-decoration: none;">
         <mat-card-title>Praia da Graciosa</mat-card-title>
         <mat-card-subtitle>Venha pra melhor praia da região Norte de Palmas</mat-card-subtitle>
       </a>
     </mat-card-header>
-    <mat-card-content>
-      <a href="https://www.google.com/maps/dir/?api=1&origin=CEULP&destination=Capim+Dourado" style="padding: 15px; background-color: #cc3300; color: #fff; text-decoration: none; border-radius: 100%; font-size: 15px;"><i class="fas fa-map-marked-alt"></i></a>
-      <a href="#" style="padding: 15px; background-color: #4cae4c; color: #fff; text-decoration: none; border-radius: 100%; font-size: 15px; margin-left: 5px"><i class="fas fa-check"></i></a>
-    </mat-card-content>
+    <div *ngIf="rota">
+      <mat-card-content>
+        <a href="https://www.google.com/maps/dir/?api=1&origin=CEULP&destination=Capim+Dourado" style="padding: 15px; background-color: #cc3300; color: #fff; text-decoration: none; border-radius: 100%; font-size: 15px;"><i class="fas fa-map-marked-alt"></i></a>
+        <a href="#" style="padding: 15px; background-color: #4cae4c; color: #fff; text-decoration: none; border-radius: 100%; font-size: 15px; margin-left: 5px"><i class="fas fa-check"></i></a>
+      </mat-card-content>
+    </div>
+    <div *ngIf="!rota">
+      <mat-card-content>
+        <div class="info">
+          <i class="fas fa-wheelchair" style="color: #20639b;"></i>
+          <a>2</a>
+          <i class="fas fa-concierge-bell" style="color: #ed553b;"></i>
+          <a>4</a>
+          <i class="fas fa-hand-holding-usd" style="color: #f6d55c;"></i>
+          <a>5</a>
+          <i class="fas fa-recycle" style="color: #3caea3;"></i>
+          <a>2</a>
+        </div>
+        <div>
+          <span style="margin-left: 20px; font-size: 10px;">Seg a Sex 09:00h as 14:00h</span>
+        </div>
+      </mat-card-content>
+    </div>
   </mat-card>
 </div>
 <div style="margin-top: 20px; text-align: right; margin-right: 10px;">
@@ -32,9 +51,28 @@
         <mat-card-subtitle>Comidas Típicas e ambiente agradável.</mat-card-subtitle>
       </a>
     </mat-card-header>
-    <mat-card-content>
-      <a href="https://www.google.com/maps/dir/?api=1&origin=CEULP&destination=Capim+Dourado" style="padding: 15px; background-color: #cc3300; color: #fff; text-decoration: none; border-radius: 100%; font-size: 15px;"><i class="fas fa-map-marked-alt"></i></a>
-      <a href="#" style="padding: 15px; background-color: #4cae4c; color: #fff; text-decoration: none; border-radius: 100%; font-size: 15px; margin-left: 5px"><i class="fas fa-check"></i></a>
-    </mat-card-content>
+    <div *ngIf="rota">
+      <mat-card-content>
+        <a href="https://www.google.com/maps/dir/?api=1&origin=CEULP&destination=Capim+Dourado" style="padding: 15px; background-color: #cc3300; color: #fff; text-decoration: none; border-radius: 100%; font-size: 15px;"><i class="fas fa-map-marked-alt"></i></a>
+        <a href="#" style="padding: 15px; background-color: #4cae4c; color: #fff; text-decoration: none; border-radius: 100%; font-size: 15px; margin-left: 5px"><i class="fas fa-check"></i></a>
+      </mat-card-content>
+    </div>
+    <div *ngIf="!rota">
+      <mat-card-content>
+        <div class="info">
+          <i class="fas fa-wheelchair" style="color: #20639b;"></i>
+          <a>2</a>
+          <i class="fas fa-concierge-bell" style="color: #ed553b;"></i>
+          <a>4</a>
+          <i class="fas fa-hand-holding-usd" style="color: #f6d55c;"></i>
+          <a>5</a>
+          <i class="fas fa-recycle" style="color: #3caea3;"></i>
+          <a>2</a>
+        </div>
+        <div>
+          <span style="margin-left: 20px; font-size: 10px;">Seg a Sex 09:00h as 14:00h</span>
+        </div>
+      </mat-card-content>
+    </div>
   </mat-card>
 </div>

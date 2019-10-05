@@ -7,13 +7,14 @@ from .serializers import *
 class RotasViewSet(viewsets.ModelViewSet):
 
     queryset = Rota.objects.all()
-    filter_backends = [DjangoFilterBackend]
+    filter_backends = [SearchFilter]
     serializer_class = RotaSerializer
+    search_fields = ['titulo', 'descricao', 'destinos__nome']
 
 
 class DestinosViewSet(viewsets.ModelViewSet):
     
     queryset = Destino.objects.all()
-    filter_backends = [DjangoFilterBackend]
+    filter_backends = [SearchFilter]
     serializer_class = DestinoSerializer
-    filterset_fields = ['tipo', 'nome']
+    search_fields = ['tipo', 'nome']

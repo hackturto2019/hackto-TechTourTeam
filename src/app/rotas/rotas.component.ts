@@ -1,41 +1,44 @@
 import { Component, OnInit } from '@angular/core';
+import {RotasServiceService} from '../shared/rotas-service.service';
 
 @Component({
   selector: 'app-rotas',
   templateUrl: './rotas.component.html',
-  styleUrls: ['./rotas.component.css']
+  styleUrls: ['./rotas.component.css'],
+  providers: [RotasServiceService]
 })
 export class RotasComponent implements OnInit {
+  tags = [
+    'Restaurante',
+    'Aventura'
+  ];
+  rotas;
+  filtro;
+  constructor(private rotasService: RotasServiceService) {
+    this.getTodasRotas();
+  }
 
-  rotas = Array(
-      {
-          'titulo': 'Rota das Cachoeiras',
-          'texto':'Conheça as cachoeiras e vistas da região',
-          'imagem':'../../assets/img/cachoeira.jpg',
-          'valor':'80',
-          'distancia': '20',
-          'tempo': '2 horas',
-          'pontos': '100'
-      },
-      {
-          'titulo':'Restaurantes Vegetariano/Vegano',
-          'texto':'Os melhores restaurantes com opções vegetarianas',
-          'imagem':'../../assets/img/restaurante.jpg',
-          'valor':'160',
-          'distancia': '90',
-          'tempo': '3 Dias',
-          'pontos': '80'
-      },
-      {
-          'titulo':'Praias e Natureza',
-          'texto':'Lazer e descanço',
-          'imagem': '../../assets/img/cachoeira.jpg',
-          'valor':'300',
-          'distancia': '20',
-          'tempo': '5h',
-          'pontos': '150'
-      });
-  constructor() {}
+  getTodasRotas = () => {
+    this.rotasService.getRotas().subscribe(
+      data => {
+        this.rotas = data;
+      }, error => {
+        console.log(error);
+    }
+    )
+};
+
+  buscarRota() {
+    this.rotasService.filtrarRotas(this.filtro).subscribe(
+      data => {
+        this.rotas = data;
+      }, error => {
+        console.log(error);
+      }
+    )
+  }
+
+
 
   ngOnInit() {
   }

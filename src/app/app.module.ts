@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,13 +18,20 @@ import { AgmCoreModule } from '@agm/core';
 import { DestinoComponent } from './destino/destino.component';
 import { MinhasRotasComponent } from './minhas-rotas/minhas-rotas.component';
 import { DestinosComponent } from './destinos/destinos.component';
+import { HttpClientModule } from '@angular/common/http';
+import { GestaoComponent } from './gestao/gestao.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
+import { GoogleChartsModule } from 'angular-google-charts';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
-  { path: 'rotas', component: RotasComponent},
+  { path: '', component: RotasComponent},
   { path: 'rota', component: RotaComponent},
   { path: 'destino', component: DestinoComponent},
   { path: 'minhas-rotas', component: MinhasRotasComponent},
-  { path: 'destinos', component: DestinosComponent}
+  { path: 'destinos', component: DestinosComponent},
+  { path: 'conhecer', component: GestaoComponent}
 ];
 
 
@@ -37,7 +43,8 @@ const appRoutes: Routes = [
     RotaComponent,
     DestinoComponent,
     MinhasRotasComponent,
-    DestinosComponent
+    DestinosComponent,
+    GestaoComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,12 +57,17 @@ const appRoutes: Routes = [
     MatIconModule,
     MatListModule,
     MatCardModule,
+    HttpClientModule,
+    GoogleChartsModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDT-sjxpLE7JUhX8k0kPCS6CzinIiGBE88'
-    })
+      apiKey: 'API-GOOGLE-AQUI'
+    }),
+    MatGridListModule,
+    MatMenuModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

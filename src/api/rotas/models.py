@@ -53,12 +53,14 @@ class Destino(models.Model):
   imagem_destaque = models.FileField(verbose_name='Imagem destaque',  upload_to=diretorio_imagens_destino_destaque)
   pontuacao_checkin = models.IntegerField()
   avaliacoes = models.ManyToManyField('Avaliacao', verbose_name='Avaliações', through='AvaliacoesDeDestino')
+  imagem = models.CharField(max_length=250, verbose_name='Caminho da imagem', null=True)
   tipo = models.CharField(max_length=128, choices=(
     ('atracao', 'Atração'),
     ('hospedagem', 'Hotel'),
     ('restaurante', 'Restaurante'),
     ('evento', 'Evento'),
   ))
+
 
   def __str__(self):
     return self.nome
@@ -106,6 +108,21 @@ class Rota(models.Model):
   imagens_rota = models.FileField(verbose_name='Imagem de Destaque da Rota', max_length=500,
                                   upload_to=diretorio_imagens_rota)
   destinos = models.ManyToManyField('Destino', verbose_name='',  through='DestinoDeRota', related_name='destinos')
+  tempo = models.FloatField(null=True)
+  imagem = models.CharField(verbose_name='Caminho da imagem', max_length=250, null=True)
+  distancia = models.FloatField(null=True)
+  valor = models.FloatField(null=True)
+  pontos = models.IntegerField(null=True)
+  tags = models.ManyToManyField('Tag', through='TagsRota')
 
   def __str__(self):
     return self.titulo
+
+
+class Tag(models.Model):
+  nome = models.CharField(verbose_name='Nome Tag', max_length=50)
+
+
+class TagsRota(models.Model):
+  tag = models.ForeignKey(Tag, on_delete=models.SET_NULL, null=True)
+  rota = models.ForeignKey(Rota, on_delete=models.SET_NULL, null=True)

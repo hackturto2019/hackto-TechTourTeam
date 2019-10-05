@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RotaComponent implements OnInit {
   titulo = 'Rota das Cachoeiras';
+  rota = false;
   lat1 = -10.195428;
   lng1 = -48.328960;
   lat2 = -10.215870;
@@ -17,6 +18,10 @@ export class RotaComponent implements OnInit {
   zoom = 10;
 
   constructor() { }
+
+  minhaRota() {
+    this.rota = true;
+  }
 
   ngOnInit() {
   }
